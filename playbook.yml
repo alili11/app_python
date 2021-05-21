@@ -7,7 +7,7 @@
     - name: archivage
       archive: 
         path: /var/lib/jenkins/workspace/app_python/application
-        dest: /var/lib/jenkins/workspace/app_python/application.tar
+        dest: ./application.tar
 
     - name: présence archive
       shell: ls /var/lib/jenkins/workspace/app_python/
