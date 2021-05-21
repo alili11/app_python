@@ -3,6 +3,6 @@ RUN mkdir /app_python
 COPY application.tar /app_python
 WORKDIR /app_python
 RUN tar -xvf application.tar
-WORKDIR ./application
+WORKDIR /app_python
 RUN pip install --no-cache-dir -r requirements.txt
 CMD python app.py
