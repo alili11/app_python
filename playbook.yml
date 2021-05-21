@@ -23,6 +23,12 @@
     - debug:
         var=result_install
 
+    - name: Copier (faire un scp) l'archive sur le dossier remote /app_python
+      copy:
+        src: application.tar
+        dest: /app_python
+        mode: 0644
+
     - name: "Copier (faire un scp) le fichier local Dockerfile sur le dossier remote /app_python"
       copy:
         src: Dockerfile
