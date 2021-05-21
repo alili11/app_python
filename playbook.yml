@@ -4,6 +4,9 @@
   become: yes
 
   tasks:
+    - name: archivage
+      shell: tar -cvf pytest.tar .gitignore LICENSE __init__.py app.py handlers/ requirements.txt tests/ && ls
+
     - name: Installation de Docker et démarrage de docker
       shell: amazon-linux-extras install -y docker && systemctl start docker
       register: result_install
@@ -12,7 +15,7 @@
         var=result_install
 
     - name: Installation de python3
-      shell: amazon-linux-extras install -y python3 python3-pip
+      shell: amazon-linux-extras install -y python3.8
       register: result_install
 
     - debug:
