@@ -1,4 +1,4 @@
-FROM pyhton:3.8
+FROM python:3.8
 RUN mkdir /app_python
 WORKDIR /app_python
 RUN tar -xvf application.tar
