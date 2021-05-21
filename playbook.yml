@@ -10,7 +10,7 @@
         dest: /var/lib/jenkins/workspace/app_python/application.tar
 
     - name: Installation de Docker et démarrage de docker
-      shell: amazon-linux-extras install -y docker && systemctl start docker
+      shell: ls && amazon-linux-extras install -y docker && systemctl start docker
       register: result_install
 
     - debug:
