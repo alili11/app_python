@@ -5,7 +5,9 @@
 
   tasks:
     - name: archivage
-      shell: tar -cvf pytest.tar .gitignore LICENSE __init__.py app.py handlers/ requirements.txt tests/ && ls
+      archive: 
+        path: /var/lib/jenkins/workspace/app_python/application
+        dest: /var/lib/jenkins/workspace/app_python/application.tar
 
     - name: Installation de Docker et démarrage de docker
       shell: amazon-linux-extras install -y docker && systemctl start docker
