@@ -18,6 +18,13 @@
     - debug:
         var=result_install
 
+    - name: Création du dossier /app_python sur la machine distante
+      file:
+        path: /app_python
+        state: directory
+        mode: 0777
+        owner: ec2-user
+
     - name: Copier (faire un scp) l'archive sur le dossier remote /app_python
       copy:
         src: application.tar
