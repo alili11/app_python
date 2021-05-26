@@ -38,7 +38,7 @@
         mode: 0644
         
     - name: "supp docker"
-      shell: docker container prune
+      shell: docker container prune --force
       
     - name: On genere l'image docker, on l'appelle formation/pytest:1.0
       shell: cd /app_python && docker build -t formation/pytest:1.0 .
