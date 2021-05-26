@@ -36,7 +36,10 @@
         src: Dockerfile
         dest: /app_python
         mode: 0644
-
+        
+    - name: "supp docker"
+      shell: docker container prune
+      
     - name: On genere l'image docker, on l'appelle formation/pytest:1.0
       shell: cd /app_python && docker build -t formation/pytest:1.0 .
       #On prend tout ce qui est du stdout et on le met dans la variable result
